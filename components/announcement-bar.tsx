@@ -9,15 +9,10 @@ export default function AnnouncementBar() {
   return (
     <div className="announcement-bar" role="status">
       <div className="announcement-track">
+        <span className="announcement-label"><Sparkles size={14} aria-hidden="true" /> Latest note</span>
+        <span className="announcement-divider" aria-hidden="true" />
         <Link href={`/blog/${latestPost.slug}`} className="announcement-item">
-          <Sparkles size={14} aria-hidden="true" />
-          <span>New note: {latestPost.title}</span>
-          <ArrowUpRight size={14} aria-hidden="true" />
-        </Link>
-        <span className="announcement-dot" aria-hidden="true">/</span>
-        <Link href={`/blog/${latestPost.slug}`} className="announcement-item" aria-hidden="true" tabIndex={-1}>
-          <Sparkles size={14} aria-hidden="true" />
-          <span>New note: {latestPost.title}</span>
+          <span>{latestPost.title}</span>
           <ArrowUpRight size={14} aria-hidden="true" />
         </Link>
       </div>
